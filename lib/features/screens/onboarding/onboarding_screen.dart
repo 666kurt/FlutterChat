@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_chat/features/screens/contacts/contacts_screen.dart';
 import '../../../constants/constants.dart';
 import '../../components/components.dart';
 
@@ -39,7 +38,7 @@ class OnboardingScreen extends StatelessWidget {
                 // Переход на экран контактов
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => ContactsScreen()),
+                  MaterialPageRoute(builder: (context) => CustomTabBar()),
                 );
               },
             ),
