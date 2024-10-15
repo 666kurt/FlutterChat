@@ -11,12 +11,21 @@ class CustomTabBar extends StatefulWidget {
 class _CustomTabBarState extends State<CustomTabBar> {
   int _selectedTab = 0;
 
-  final List<Widget> _screens = [
-    ContactsScreen(),
-    Center(child: Text("Message")),
-    Center(child: Text("Menu")),
-  ];
+  // Получение экрана по индексу
+  Widget _getScreen() {
+    switch (_selectedTab) {
+      case 0:
+        return ContactsScreen();
+      case 1:
+        return Center(child: Text("Message"));
+      case 2:
+        return Center(child: Text("Menu"));
+      default:
+        return Center(child: Text("Unknown screen"));
+    }
+  }
 
+  // Смена таба по нажатию
   void _changeTab(int index) {
     setState(() {
       _selectedTab = index;
@@ -26,7 +35,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _screens[_selectedTab],
+      body: _getScreen(),
       backgroundColor: Colors.white,
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
