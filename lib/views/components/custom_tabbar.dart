@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_chat/features/screens/contacts/contacts_screen.dart';
+import 'package:flutter_chat/views/screens/contacts/contacts_screen.dart';
 
 class CustomTabBar extends StatefulWidget {
   const CustomTabBar({super.key});
@@ -56,6 +56,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
               onTap: () => _changeTab(0),
               child: ImageIcon(
                 AssetImage('assets/contacts.png'),
+                size: 26,
                 color: _selectedTab == 0
                     ? Color.fromRGBO(154, 65, 254, 1)
                     : Color.fromRGBO(41, 24, 59, 1),
@@ -65,6 +66,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
               onTap: () => _changeTab(1),
               child: ImageIcon(
                 AssetImage('assets/message.png'),
+                size: 26,
                 color: _selectedTab == 1
                     ? Color.fromRGBO(154, 65, 254, 1)
                     : Color.fromRGBO(41, 24, 59, 1),
@@ -74,6 +76,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
               onTap: () => _changeTab(2),
               child: ImageIcon(
                 AssetImage('assets/more.png'),
+                size: 26,
                 color: _selectedTab == 2
                     ? Color.fromRGBO(154, 65, 254, 1)
                     : Color.fromRGBO(41, 24, 59, 1),
@@ -85,3 +88,8 @@ class _CustomTabBarState extends State<CustomTabBar> {
     );
   }
 }
+
+// MVC (Model-View-Controller)
+// Model - отвечает за структуру (модель) данных, которые получает приложение
+// View - отвечает за отображение данных пользователю
+// Controller - контролирует взаимодействие между View и Model, обрабатывая события от пользователя
