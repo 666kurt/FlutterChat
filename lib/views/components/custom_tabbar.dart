@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat/views/screens/contacts/contacts_screen.dart';
 
@@ -89,7 +90,9 @@ class _CustomTabBarState extends State<CustomTabBar> {
   }
 }
 
-// MVC (Model-View-Controller)
-// Model - отвечает за структуру (модель) данных, которые получает приложение
-// View - отвечает за отображение данных пользователю
-// Controller - контролирует взаимодействие между View и Model, обрабатывая события от пользователя
+// 1. Scafford с CustomAppbar
+// 2. Body c Column
+// 3. Container
+// 4. Text
+// 5. Text
+// 6. Row c container
